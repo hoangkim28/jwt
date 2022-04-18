@@ -13,10 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::post('login', 'AuthController@login')->middleware('api');
 
 Route::group(['middleware' => ['api','jwt.verify']], function ($router) {
@@ -24,7 +20,9 @@ Route::group(['middleware' => ['api','jwt.verify']], function ($router) {
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
+    Route::patch('user/{id}', 'UserController@update')->name('user.update');
+    Route::get('users', 'UserController@index')->name('user.list');
 });
 
-Route::post('users', 'UserController@store');
-Route::get('users', 'UserController@index');
+Route::post('user', 'UserController@store')->name('user.store');
+Route::get('user/{id}', 'UserController@find')->name('user.detail');
