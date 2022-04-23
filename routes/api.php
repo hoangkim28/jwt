@@ -26,3 +26,7 @@ Route::group(['middleware' => ['api','jwt.verify']], function ($router) {
 
 Route::post('user', 'UserController@store')->name('user.store');
 Route::get('user/{id}', 'UserController@find')->name('user.detail');
+
+
+Route::post('payment', 'PaymentController@create')->name('create');
+Route::get('payment/respone', 'PaymentController@respone')->name('respone');
