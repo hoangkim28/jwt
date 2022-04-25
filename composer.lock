@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22f314fe1ed79b88f812e9d7be115e80",
+    "content-hash": "a0d9112fe4d6e012b2fd1bf07b28a3da",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -843,6 +843,64 @@
                 }
             ],
             "time": "2022-03-20T21:55:58+00:00"
+        },
+        {
+            "name": "ignited/laravel-omnipay",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ignited/laravel-omnipay.git",
+                "reference": "3c6dd701f4bb5b6c47860ead716445f964b270f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ignited/laravel-omnipay/zipball/3c6dd701f4bb5b6c47860ead716445f964b270f5",
+                "reference": "3c6dd701f4bb5b6c47860ead716445f964b270f5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5|~6|~7|~8|~9",
+                "omnipay/common": "~3.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Ignited\\LaravelOmnipay\\LaravelOmnipayServiceProvider"
+                    ],
+                    "aliases": {
+                        "Omnipay": "Ignited\\LaravelOmnipay\\Facades\\OmnipayFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ignited\\LaravelOmnipay": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Alex Whiteside",
+                    "email": "alexwhiteside@ignitedlabs.com.au"
+                }
+            ],
+            "description": "Integrates Omnipay with Laravel and provides an easy configuration.",
+            "keywords": [
+                "laravel",
+                "laravel5",
+                "omnipay",
+                "payments"
+            ],
+            "support": {
+                "issues": "https://github.com/ignited/laravel-omnipay/issues",
+                "source": "https://github.com/ignited/laravel-omnipay/tree/3.4.0"
+            },
+            "time": "2022-02-24T22:23:01+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2431,6 +2489,142 @@
             "time": "2021-12-04T23:24:31+00:00"
         },
         {
+            "name": "phpviet/laravel-omnipay",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpviet/laravel-omnipay.git",
+                "reference": "62a66174ae2abd121cf6c3da8e9f83d0686dbb26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpviet/laravel-omnipay/zipball/62a66174ae2abd121cf6c3da8e9f83d0686dbb26",
+                "reference": "62a66174ae2abd121cf6c3da8e9f83d0686dbb26",
+                "shasum": ""
+            },
+            "require": {
+                "ignited/laravel-omnipay": "^3.3",
+                "illuminate/support": "^5.7 || ^6.0 || ^7.0 || ^8.0",
+                "php": "^7.1",
+                "phpviet/omnipay-momo": "^1.0",
+                "phpviet/omnipay-onepay": "^1.0",
+                "phpviet/omnipay-vnpay": "^1.0",
+                "phpviet/omnipay-vtcpay": "^1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.7 || ^4.0 || ^5.0 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "aliases": {
+                        "MoMoAIO": "PHPViet\\Laravel\\Omnipay\\Facades\\MoMo\\AllInOneGateway",
+                        "MoMoAIA": "PHPViet\\Laravel\\Omnipay\\Facades\\MoMo\\AppInAppGateway",
+                        "MoMoPOS": "PHPViet\\Laravel\\Omnipay\\Facades\\MoMo\\POSGateway",
+                        "MoMoQRCode": "PHPViet\\Laravel\\Omnipay\\Facades\\MoMo\\QRCodeGateway",
+                        "OnePayDomestic": "PHPViet\\Laravel\\Omnipay\\Facades\\OnePay\\DomesticGateway",
+                        "OnePayInternational": "PHPViet\\Laravel\\Omnipay\\Facades\\OnePay\\InternationalGateway",
+                        "VNPay": "PHPViet\\Laravel\\Omnipay\\Facades\\VNPay\\Gateway",
+                        "VTCPay": "PHPViet\\Laravel\\Omnipay\\Facades\\VTCPay\\Gateway"
+                    },
+                    "providers": [
+                        "PHPViet\\Laravel\\Omnipay\\OmnipayServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPViet\\Laravel\\Omnipay\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vuong Xuong Minh",
+                    "email": "vuongxuongminh@gmail.com"
+                }
+            ],
+            "description": "Laravel Omnipay hổ trợ tích hợp các cổng thanh toán trong nước.",
+            "homepage": "https://github.com/phpviet/laravel-omnipay",
+            "keywords": [
+                "laravel-omnipay",
+                "omnipay",
+                "payment-gateways",
+                "phpviet",
+                "vietnam-payment-gateways"
+            ],
+            "support": {
+                "issues": "https://github.com/phpviet/laravel-omnipay/issues",
+                "source": "https://github.com/phpviet/laravel-omnipay/tree/1.1.2"
+            },
+            "time": "2021-03-14T03:11:29+00:00"
+        },
+        {
+            "name": "phpviet/omnipay-momo",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpviet/omnipay-momo.git",
+                "reference": "0aade6500e6d4e80a244eeda971efccbbc8cac23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpviet/omnipay-momo/zipball/0aade6500e6d4e80a244eeda971efccbbc8cac23",
+                "reference": "0aade6500e6d4e80a244eeda971efccbbc8cac23",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "^3.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "omnipay/tests": "^3.0",
+                "scrutinizer/ocular": "^1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Omnipay\\MoMo\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vuong Xuong Minh",
+                    "email": "vuongxuongminh@gmail.com"
+                }
+            ],
+            "description": "Thư viện hổ trợ tích hợp cổng thanh toán MoMo.",
+            "homepage": "https://github.com/phpviet/omnipay-momo",
+            "keywords": [
+                "momo",
+                "payment",
+                "payment-gateway",
+                "phpviet",
+                "vietnam-payment",
+                "vietnam-payment-gateway"
+            ],
+            "support": {
+                "issues": "https://github.com/phpviet/omnipay-momo/issues",
+                "source": "https://github.com/phpviet/omnipay-momo/tree/master"
+            },
+            "time": "2019-08-11T11:40:50+00:00"
+        },
+        {
             "name": "phpviet/omnipay-onepay",
             "version": "1.0.2",
             "source": {
@@ -2488,6 +2682,124 @@
                 "source": "https://github.com/phpviet/omnipay-onepay/tree/master"
             },
             "time": "2020-08-07T14:30:29+00:00"
+        },
+        {
+            "name": "phpviet/omnipay-vnpay",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpviet/omnipay-vnpay.git",
+                "reference": "91e2059838d44afa42f0173122fc499a709f7e7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpviet/omnipay-vnpay/zipball/91e2059838d44afa42f0173122fc499a709f7e7b",
+                "reference": "91e2059838d44afa42f0173122fc499a709f7e7b",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "^3.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "omnipay/tests": "^3.0",
+                "scrutinizer/ocular": "^1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Omnipay\\VNPay\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vuong Xuong Minh",
+                    "email": "vuongxuongminh@gmail.com"
+                }
+            ],
+            "description": "Thư viện hổ trợ tích hợp cổng thanh toán VNPay.",
+            "homepage": "https://github.com/phpviet/omnipay-vnpay",
+            "keywords": [
+                "payment",
+                "payment-gateway",
+                "phpviet",
+                "vietnam-payment",
+                "vietnam-payment-gateway",
+                "vnpay"
+            ],
+            "support": {
+                "issues": "https://github.com/phpviet/omnipay-vnpay/issues",
+                "source": "https://github.com/phpviet/omnipay-vnpay/tree/master"
+            },
+            "time": "2020-07-09T10:18:29+00:00"
+        },
+        {
+            "name": "phpviet/omnipay-vtcpay",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpviet/omnipay-vtcpay.git",
+                "reference": "0426ec80ad6b22fc0bacdf5ca4ceec7ec540b776"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpviet/omnipay-vtcpay/zipball/0426ec80ad6b22fc0bacdf5ca4ceec7ec540b776",
+                "reference": "0426ec80ad6b22fc0bacdf5ca4ceec7ec540b776",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "^3.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "omnipay/tests": "^3.0",
+                "scrutinizer/ocular": "^1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Omnipay\\VTCPay\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vuong Xuong Minh",
+                    "email": "vuongxuongminh@gmail.com"
+                }
+            ],
+            "description": "Thư viện hổ trợ tích hợp cổng thanh toán VTCPay.",
+            "homepage": "https://github.com/phpviet/omnipay-vtcpay",
+            "keywords": [
+                "payment",
+                "payment-gateway",
+                "phpviet",
+                "vietnam-payment",
+                "vietnam-payment-gateway",
+                "vtcpay"
+            ],
+            "support": {
+                "issues": "https://github.com/phpviet/omnipay-vtcpay/issues",
+                "source": "https://github.com/phpviet/omnipay-vtcpay/tree/1.0.1"
+            },
+            "time": "2019-07-05T10:33:59+00:00"
         },
         {
             "name": "psr/container",
